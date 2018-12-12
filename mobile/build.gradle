@@ -30,6 +30,32 @@ android {
             path "CMakeLists.txt"
         }
     }
+
+    splits {
+
+        // Configures multiple APKs based on screen density.
+        density {
+
+            // Enables building multiple APKs.
+            enable true
+
+            // Specifies a list of screen densities Gradle should not create APKs for.
+            exclude "ldpi", "mdpi"
+
+            // Alternatively, you can use the following to clear the default list of
+            // screen densities and specify only the screen densities you want to build
+            // APKs for:
+            // reset()
+            // include "hdpi", "xhdpi", "xxhdpi", "xxxhdpi"
+
+            // Specifies a list of compatible screen size settings. This property
+            // configures the <compatible-screens> element in the manifest. You
+            // typically don't need to configure this manifest property, but it's
+            // important when building multiple APKs based on screen density.
+            compatibleScreens 'normal', 'large', 'xlarge'
+        }
+    }
+
 }
 
 dependencies {
