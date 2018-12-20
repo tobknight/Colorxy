@@ -14,15 +14,18 @@ public class Platter implements ColorInterface, PlatterInterface {
      * Platter list container
      */
     private ArrayList<Color> platter;
+    /**Name*/
+    private String name;
     /***/
     private Color colorcreator;
 
     /**
      * Constructor
      */
-    public Platter() {
+    public Platter(String name) {
         platter = new ArrayList<Color>();
         colorcreator = Color.valueOf(0.0f, 0.0f, 0.0f);
+        this.name = name;
     }
 
     /**
@@ -98,8 +101,8 @@ public class Platter implements ColorInterface, PlatterInterface {
         }
 
         Color temp = platter.get(i);
-        platter.get(i) = platter.get(j);
-        platter.get(j) = temp;
+        platter.set(i,platter.get(j));
+        platter.set(j, temp);
     }
 
     /**
