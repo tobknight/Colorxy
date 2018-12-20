@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Colorxy</string>
+    <string name="version">Version:0.0.0</string>
 </resources>
