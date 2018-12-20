@@ -6,7 +6,8 @@ import java.util.ArrayList;
 
 /**
  * Platter
- * @author  Tobknight
+ *
+ * @author Tobknight
  */
 public class Platter implements ColorInterface, PlatterInterface {
     /**
@@ -21,7 +22,7 @@ public class Platter implements ColorInterface, PlatterInterface {
      */
     public Platter() {
         platter = new ArrayList<Color>();
-        colorcreator = Color.valueOf(0.0f,0.0f,0.0f);
+        colorcreator = Color.valueOf(0.0f, 0.0f, 0.0f);
     }
 
     /**
@@ -92,7 +93,7 @@ public class Platter implements ColorInterface, PlatterInterface {
     @Override
     public void exch(int i, int j) {
 
-        if( platter.get(i)==null|| platter.get(j)==null){
+        if (platter.get(i) == null || platter.get(j) == null) {
             throw new NullPointerException("ぬるぽ");
         }
 
