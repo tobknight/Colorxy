@@ -43,15 +43,15 @@ public class DigitalColorPicker {
      * Constructor
      */
     public DigitalColorPicker() {
-        DigitalColorPicker(triangle);
+        Shape = triangle;
     }
 
+
     /**
-     *
      * @return Color
      */
-    public Color getCorlorinforbyTouch(){
-
+    public Color getCorlorinforbyTouch() {
+        return null;
     }
 
     public int getSaturation() {
@@ -82,7 +82,7 @@ public class DigitalColorPicker {
         /**
          * Constructor
          *
-         * @param value
+         * @param value HUE VALUE
          */
         public ColorWheel(int value) {
             setHUE(value);
@@ -97,6 +97,7 @@ public class DigitalColorPicker {
 
         /**
          * Set Hue
+         * @param HUE HUE Value
          */
         public void setHUE(int HUE) {
             this.HUE = HUE;
