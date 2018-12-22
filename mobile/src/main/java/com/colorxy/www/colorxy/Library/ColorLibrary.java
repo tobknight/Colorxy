@@ -13,7 +13,7 @@ public class ColorLibrary implements ColorInterface {
     /**
      * Instance of Color Library
      */
-    private ColorLibrary instance;
+    private static ColorLibrary instance;
 
     /**
      * Shelf
@@ -21,7 +21,7 @@ public class ColorLibrary implements ColorInterface {
     private ArrayList<Color> ColorShelf;
 
 
-    public ColorLibrary getInstance() {
+    public static ColorLibrary getInstance() {
         if (instance == null) {
             instance = new ColorLibrary();
         }
@@ -69,5 +69,18 @@ public class ColorLibrary implements ColorInterface {
     @Override
     public void addHSV(float H, float S, float V) {
 
+    }
+
+    /**
+     * Return List of Color stored in Library
+     *
+     * @return ArrayList Color
+     */
+    public ArrayList<Color> getShelf() {
+        return ColorShelf;
+    }
+
+    public int size() {
+        return ColorShelf.size();
     }
 }
