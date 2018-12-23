@@ -7,17 +7,28 @@
         android:layout_height="match_parent"
         tools:context=".Library.ColorLibraryActivity" tools:layout_editor_absoluteY="81dp">
 
-    <ScrollView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:id="@+id/scrollView"
-            tools:layout_editor_absoluteX="8dp"
-    >
-    </ScrollView>
-    <GridView
-            android:layout_width="395dp"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="202dp"
-            android:numColumns="auto_fit"
-            tools:layout_editor_absoluteX="8dp" android:id="@+id/ColorGrid"/>
-</android.support.constraint.ConstraintLayout>
+    <menu>
 
+        <!-- "Mark Favorite", should appear as action button if possible -->
+        <item
+                android:id="@+id/action_option"
+                android:icon="@drawable/ic_more_vert_black_48dp"
+                android:title="@string/action_option"
+                app:showAsAction="ifRoom"/>
+
+
+    </menu>
+    <!--<ScrollView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:id="@+id/scrollView"-->
+    <!--tools:layout_editor_absoluteX="8dp"-->
+    <!--&gt;-->
+    <!--</ScrollView>-->
+
+    <!--<GridView-->
+    <!--android:layout_width="410dp"-->
+    <!--android:layout_height="806dp" tools:layout_editor_absoluteY="-1dp"-->
+    <!--android:numColumns="auto_fit"-->
+    <!--tools:layout_editor_absoluteX="0dp" android:id="@+id/ColorGrid"/>-->
+</android.support.constraint.ConstraintLayout>
