@@ -4,11 +4,16 @@ import android.content.Context
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ListView
 import com.colorxy.www.colorxy.Adapter.ColorAdapter
 import com.colorxy.www.colorxy.R
 import java.util.ArrayList
-import android.R.menu
+
+
+
+
 
 
 class ColorLibraryActivity : AppCompatActivity() {
@@ -29,7 +34,7 @@ class ColorLibraryActivity : AppCompatActivity() {
     /**Color Adapter*/
     private var mAdapter: ColorAdapter = ColorAdapter(shelf as ArrayList<Color>?)
     /**List view*/
-    private var list_color: ListView = ListView()
+    private var list_color: ListView = 0 as ListView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,25 +50,27 @@ class ColorLibraryActivity : AppCompatActivity() {
 //        mData.add(Animal("马说", "你是马么?", R.mipmap.ic_icon_horse))
 //        mAdapter = AnimalAdapter(mData as LinkedList<Animal>, mContext)
 //        list_animal.setAdapter(mAdapter)
-        context = this@ColorLibraryActivity
-        list_color = findViewById(R.id.list_color) as ListView
-        mAdapter = ColorAdapter(shelf as ArrayList<Color>?)
-        this.list_color.setAdapter(mAdapter)
+
+//        context = this@ColorLibraryActivity
+//        list_color = findViewById(R.id.list_color) as ListView
+//        mAdapter = ColorAdapter(shelf as ArrayList<Color>?)
+//        this.list_color.setAdapter(mAdapter)
 
     }
 
     // create an action bar button
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.mymenu, menu)
-        return super.onCreateOptionsMenu(menu)
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.color_library_menu, menu)
+        return true
     }
 
     // handle button activities
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.getItemId()
 
-        if (id == R.id.mybutton) {
-            // do something here
+        if (id == R.id.action_option) {
+            return true
         }
         return super.onOptionsItemSelected(item)
     }

@@ -7,28 +7,35 @@
         android:layout_height="match_parent"
         tools:context=".Library.ColorLibraryActivity" tools:layout_editor_absoluteY="81dp">
 
-    <menu>
+    <!--<menu>-->
 
-        <!-- "Mark Favorite", should appear as action button if possible -->
-        <item
-                android:id="@+id/action_option"
-                android:icon="@drawable/ic_more_vert_black_48dp"
-                android:title="@string/action_option"
-                app:showAsAction="ifRoom"/>
+    <!--&lt;!&ndash; "Mark Favorite", should appear as action button if possible &ndash;&gt;-->
+    <!--<item-->
+    <!--android:id="@+id/action_option"-->
+    <!--android:icon="@drawable/ic_more_vert_black_48dp"-->
+    <!--android:title="@string/action_option"-->
+    <!--app:showAsAction="ifRoom"/>-->
+    <!--&lt;!&ndash;<Switch&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="Switch"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content" android:id="@+id/switch"/>&ndash;&gt;-->
 
 
-    </menu>
-    <!--<ScrollView-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_height="0dp"-->
-    <!--android:id="@+id/scrollView"-->
-    <!--tools:layout_editor_absoluteX="8dp"-->
-    <!--&gt;-->
-    <!--</ScrollView>-->
+    <!--</menu>-->
 
-    <!--<GridView-->
-    <!--android:layout_width="410dp"-->
-    <!--android:layout_height="806dp" tools:layout_editor_absoluteY="-1dp"-->
-    <!--android:numColumns="auto_fit"-->
-    <!--tools:layout_editor_absoluteX="0dp" android:id="@+id/ColorGrid"/>-->
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/scrollView"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent">
+    </ScrollView>
+
+    <GridView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:numColumns="auto_fit"
+            android:id="@+id/ColorGrid" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 </android.support.constraint.ConstraintLayout>
