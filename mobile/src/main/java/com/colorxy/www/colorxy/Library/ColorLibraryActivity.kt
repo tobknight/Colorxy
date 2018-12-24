@@ -1,77 +1,23 @@
 package com.colorxy.www.colorxy.Library
 
-import android.content.Context
-import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.ListView
-import com.colorxy.www.colorxy.Adapter.ColorAdapter
+import android.support.design.widget.Snackbar
+import android.support.v7.app.AppCompatActivity;
 import com.colorxy.www.colorxy.R
-import java.util.ArrayList
 
-
-
-
-
+import kotlinx.android.synthetic.main.activity_color_library.*
 
 class ColorLibraryActivity : AppCompatActivity() {
-
-//    例子 以及Kotlin val为read-only 等同于final static / constant
-//    private val mData: List<Animal>? = null
-//    private val mContext: Context? = null
-//    private val mAdapter: AnimalAdapter? = null
-//    private val list_animal: ListView? = null
-
-
-    /**Instance of ColorLibrary*/
-    private val colorlibrary: ColorLibrary = ColorLibrary.getInstance();
-    /**ColorLibrary Shelf*/
-    private val shelf: List<Color> = colorlibrary.shelf;
-    /**Context*/
-    private var context: Context = this@ColorLibraryActivity
-    /**Color Adapter*/
-    private var mAdapter: ColorAdapter = ColorAdapter(shelf as ArrayList<Color>?)
-    /**List view*/
-    private var list_color: ListView = 0 as ListView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_color_library)
+        setSupportActionBar(toolbar)
 
-//        mContext = this@MainActivity
-//        list_animal = findViewById(R.id.list_animal) as ListView
-//        mData = LinkedList<Animal>()
-//        mData.add(Animal("狗说", "你是狗么?", R.mipmap.ic_icon_dog))
-//        mData.add(Animal("牛说", "你是牛么?", R.mipmap.ic_icon_cow))
-//        mData.add(Animal("鸭说", "你是鸭么?", R.mipmap.ic_icon_duck))
-//        mData.add(Animal("鱼说", "你是鱼么?", R.mipmap.ic_icon_fish))
-//        mData.add(Animal("马说", "你是马么?", R.mipmap.ic_icon_horse))
-//        mAdapter = AnimalAdapter(mData as LinkedList<Animal>, mContext)
-//        list_animal.setAdapter(mAdapter)
-
-//        context = this@ColorLibraryActivity
-//        list_color = findViewById(R.id.list_color) as ListView
-//        mAdapter = ColorAdapter(shelf as ArrayList<Color>?)
-//        this.list_color.setAdapter(mAdapter)
-
-    }
-
-    // create an action bar button
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.color_library_menu, menu)
-        return true
-    }
-
-    // handle button activities
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.getItemId()
-
-        if (id == R.id.action_option) {
-            return true
+        fab.setOnClickListener { view ->
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
         }
-        return super.onOptionsItemSelected(item)
     }
+
 }

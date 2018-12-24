@@ -10,6 +10,6 @@
     <Switch
             android:text="Switch"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/switch"/>
+            android:layout_height="wrap_content" android:id="@+id/switchItem"/>
 
 </menu>

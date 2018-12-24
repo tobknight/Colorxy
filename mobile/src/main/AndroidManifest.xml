@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.colorxy.www.colorxy">
 
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
-
 
     <application
             android:allowBackup="true"
@@ -22,8 +22,10 @@
         </activity>
         <activity android:name=".Library.PlatterActivity">
         </activity>
-        <activity android:name=".Library.ColorLibraryActivity"
-                  android:label="Color Library">
+        <activity
+                android:name=".Library.ColorLibraryActivity"
+                android:label="Color Library"
+                android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

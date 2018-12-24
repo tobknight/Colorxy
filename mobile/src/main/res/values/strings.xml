@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Colorxy</string>
     <string name="version">Version:0.0.0</string>
+    <string name="title_activity_color_library">ColorLibraryActivity</string>
 </resources>
